@@ -4,11 +4,11 @@ import { Logo, Search, ShoppingBag, Heart, Hamburger, Close } from "../assets";
 import Container from "../layouts/container";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <section className="relative">
-      <Container>
-        <nav className="fixed z-10 flex w-full items-center justify-between bg-white px-4 py-5 shadow-md lg:left-0 lg:top-0 lg:px-[120px] lg:py-7 ">
+      <section className="mx-auto lg:max-w-[1200px]">
+        <nav className="fixed z-10 flex w-full items-center justify-between bg-white px-4 py-5 shadow-md lg:left-0 lg:top-0 lg:px-[76px] lg:py-7 ">
           <div className="flex gap-x-4 lg:hidden">
             <button onClick={() => setMenuOpen(true)}>
               <Hamburger />
@@ -16,7 +16,9 @@ export default function Navbar() {
             <Logo />
           </div>
           <div className="hidden lg:block">
-            <Logo />
+            <button>
+              <Logo />
+            </button>
           </div>
 
           <ul className="hidden items-center gap-x-10 text-xs leading-[150%] lg:flex">
@@ -59,39 +61,43 @@ export default function Navbar() {
             </button>
           </div>
         </nav>
-      </Container>
+      </section>
 
-      {menuOpen && (<div className="fixed bottom-0 left-0 right-10 top-0 z-20 h-full bg-white">
-        <div className="mt-4 pr-3 text-right">
-          <button onClick={() => setMenuOpen(false)}>
-            <Close />
-          </button>
+      {menuOpen && (
+        <div className="fixed inset-0 z-20 bg-black/40">
+          <div className="fixed bottom-0 left-0 right-10 top-0 z-20 h-full bg-white">
+            <div className="mt-4 pr-3 text-right">
+              <button onClick={() => setMenuOpen(false)}>
+                <Close />
+              </button>
+            </div>
+
+            <ul className="mt-12 items-center space-y-6 text-center text-lg leading-[150%] lg:hidden">
+              <li>
+                <button>SALE</button>
+              </li>
+              <li>
+                <button>NEW IN</button>
+              </li>
+              <li>
+                <button>CLOTHING</button>
+              </li>
+              <li>
+                <button>SHOES</button>
+              </li>
+              <li>
+                <button>ACCESSORIES</button>
+              </li>
+              <li>
+                <button>GIFTS</button>
+              </li>
+              <li>
+                <button>COLLECTIONS</button>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <ul className="mt-12 items-center space-y-6 text-center text-lg leading-[150%] lg:hidden">
-          <li>
-            <button>SALE</button>
-          </li>
-          <li>
-            <button>NEW IN</button>
-          </li>
-          <li>
-            <button>CLOTHING</button>
-          </li>
-          <li>
-            <button>SHOES</button>
-          </li>
-          <li>
-            <button>ACCESSORIES</button>
-          </li>
-          <li>
-            <button>GIFTS</button>
-          </li>
-          <li>
-            <button>COLLECTIONS</button>
-          </li>
-        </ul>
-      </div>)}
+      )}
     </section>
   );
 }

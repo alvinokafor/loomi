@@ -12,7 +12,12 @@ module.exports = {
         secondary: ["var(--font-cormarant)"],
       },
       colors: {
-        primary: '#F4A482'
+        primary: "#F4A482",
+        secondary: "#7E7B77",
+        accent: "#2D2A27",
+        dun: "#CCBDB2",
+        light: "#D4CFCB",
+        almond: "#F2E4D5",
       },
     },
   },
