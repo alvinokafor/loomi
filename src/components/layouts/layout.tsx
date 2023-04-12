@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navbar from "../partials/navbar";
+import Footer from "../partials/footer";
 
 interface ILayoutProps {
   title: string;
@@ -15,6 +16,7 @@ export default function Layout({ title, children }: ILayoutProps) {
 
       <Navbar />
       <main>{children}</main>
+      <Footer />
     </>
   );
 }

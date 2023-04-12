@@ -18,6 +18,8 @@ module.exports = {
         dun: "#CCBDB2",
         light: "#D4CFCB",
         almond: "#F2E4D5",
+        seasalt: "#FAF8F7",
+        brown: "#887568",
       },
     },
   },

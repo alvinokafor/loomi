@@ -11,21 +11,23 @@ export default function Promo() {
   return (
     <section className="mt-28">
       <Container>
-        <section className="relative flex">
-          <div className="flex w-3/5 flex-col items-center justify-center bg-almond">
-            <h4 className={`${cormarant.className} z-20 text-4xl`}>
+        <section className="relative flex flex-col-reverse bg-almond lg:flex-row">
+          <div className="flex flex-col items-center justify-center bg-almond text-center lg:w-3/5">
+            <h4
+              className={`${cormarant.className} z-20 mt-5 text-2xl lg:mt-0 lg:text-4xl`}
+            >
               Explore discounted products up to 40%
             </h4>
-            <button className="mt-10 bg-white px-6 py-4 text-sm font-semibold shadow-sm">
+            <button className="mb-10 mt-5 bg-white px-6 py-4 text-sm font-semibold shadow-sm lg:mb-0 lg:mt-10">
               Shop now
             </button>
           </div>
 
-          <div className="w-2/5">
+          <div className="px-10 mx-auto pt-10 lg:w-2/5 lg:px-0 lg:pt-0">
             <img src="/images/promo-img.png" alt="" />
           </div>
 
-          <div className="absolute">
+          <div className="absolute -left-24 top-0 lg:left-6 lg:top-6">
             <img src="/images/wave.svg" alt="" />
           </div>
         </section>
