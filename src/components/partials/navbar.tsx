@@ -64,7 +64,7 @@ export default function Navbar() {
       </section>
 
       {menuOpen && (
-        <div className="fixed inset-0 z-20 bg-black/40">
+        <div className="fixed inset-0 z-30 bg-black/40">
           <div className="fixed bottom-0 left-0 right-10 top-0 z-20 h-full bg-white">
             <div className="mt-4 pr-3 text-right">
               <button onClick={() => setMenuOpen(false)}>

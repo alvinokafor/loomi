@@ -20,6 +20,7 @@ module.exports = {
         almond: "#F2E4D5",
         seasalt: "#FAF8F7",
         brown: "#887568",
+        urgent: '#EB5757',
       },
     },
   },

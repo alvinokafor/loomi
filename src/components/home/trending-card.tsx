@@ -22,7 +22,7 @@ export default function TrendingCard() {
 
       <div className="mt-4 space-y-2 text-left sm:text-center">
         <p className="font-medium">Product Title</p>
-        <p className="text-sm hidden lg:block">Category</p>
+        <p className="hidden text-sm lg:block">Category</p>
         <p className="text-sm text-primary">$Price</p>
       </div>
     </div>
