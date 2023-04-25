@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <section className="relative">
       <section className="mx-auto lg:max-w-[1200px]">
-        <nav className="fixed z-30 flex w-full items-center justify-between bg-white px-4 py-5 shadow-md lg:left-0 lg:top-0 lg:px-[76px] lg:py-7 ">
+        <nav className="fixed z-40 flex w-full items-center justify-between bg-white px-4 py-5 shadow-md lg:left-0 lg:top-0 lg:px-[76px] lg:py-7 ">
           <div className="flex gap-x-4 lg:hidden">
             <button onClick={() => setMenuOpen(true)}>
               <Hamburger />

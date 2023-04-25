@@ -1,5 +1,5 @@
-import * as Slider from "@radix-ui/react-slider";
 import { SetStateAction, Dispatch } from "react";
+import * as Slider from "@radix-ui/react-slider";
 
 interface IPriceSlider {
   setSlideValues: Dispatch<SetStateAction<number[]>>;
@@ -20,8 +20,8 @@ function PriceSlider({ setSlideValues }: IPriceSlider) {
         <Slider.Track className="relative h-[3px] grow rounded-full bg-slate-400">
           <Slider.Range className="absolute h-full rounded-full bg-primary" />
         </Slider.Track>
-        <Slider.Thumb className="hover:bg-violet3 focus:shadow-blackA8 block h-5 w-5 rounded-[10px] bg-white shadow-[0_2px_10px] focus:shadow-[0_0_0_5px] focus:outline-none" />
-        <Slider.Thumb className="hover:bg-violet3 focus:shadow-blackA8 block h-5 w-5 rounded-[10px] bg-white shadow-[0_2px_10px] focus:shadow-[0_0_0_5px] focus:outline-none" />
+        <Slider.Thumb className="block h-6 w-6 rounded-full border-2 border-primary bg-white shadow-sm focus:outline-none" />
+        <Slider.Thumb className="block h-6 w-6 rounded-full border-2 border-primary bg-white shadow-sm focus:outline-none" />
       </Slider.Root>
     </form>
   );
