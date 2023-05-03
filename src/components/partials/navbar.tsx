@@ -1,7 +1,10 @@
 import { useState } from "react";
+import Link from "next/link";
 
-import { Logo, Search, ShoppingBag, Heart, Hamburger, Close } from "../assets";
-import Container from "../layouts/container";
+import { Logo, Search, Heart, Hamburger, Close } from "../assets";
+import ShoppingBag from "./icons/ShoppingBag";
+import NotificationBadge from "./ui/notification-badge";
+import Avatar from "./ui/avatar";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,18 +19,14 @@ export default function Navbar() {
             <Logo />
           </div>
           <div className="hidden lg:block">
-            <button>
-              <Logo />
-            </button>
+            <Link href="/">
+              <button>
+                <Logo />
+              </button>
+            </Link>
           </div>
 
           <ul className="hidden items-center gap-x-10 text-xs leading-[150%] lg:flex">
-            <li>
-              <button>SALE</button>
-            </li>
-            <li>
-              <button>NEW IN</button>
-            </li>
             <li>
               <button>CLOTHING</button>
             </li>
@@ -46,25 +45,37 @@ export default function Navbar() {
           </ul>
 
           <div className="flex items-center justify-center gap-x-6">
-            <button>
+            {/* <button>
               <Search />
+            </button> */}
+            <button className="relative">
+              <Link href="/liked-products">
+                <Heart />
+              </Link>
+              <Link href="/">
+                <NotificationBadge />
+              </Link>
             </button>
-            <button>
-              <Heart />
-            </button>
-            <button>
-              <ShoppingBag />
+            <button className="relative">
+              <Link href="/cart">
+                <ShoppingBag />
+              </Link>
+              <Link href="/cart">
+                <NotificationBadge />
+              </Link>
             </button>
 
-            <button className="hidden bg-primary px-6 py-2 text-[13px] text-white lg:block">
+            {/* <button className="hidden bg-primary px-6 py-2 text-[13px] text-white lg:block">
               Login
-            </button>
+            </button> */}
+
+            <Avatar />
           </div>
         </nav>
       </section>
 
       {menuOpen && (
-        <div className="fixed inset-0 z-30 bg-black/40">
+        <div className="fixed inset-0 z-40 bg-black/40">
           <div className="fixed bottom-0 left-0 right-10 top-0 z-20 h-full bg-white">
             <div className="mt-4 pr-3 text-right">
               <button onClick={() => setMenuOpen(false)}>
@@ -73,12 +84,6 @@ export default function Navbar() {
             </div>
 
             <ul className="mt-12 items-center space-y-6 text-center text-lg leading-[150%] lg:hidden">
-              <li>
-                <button>SALE</button>
-              </li>
-              <li>
-                <button>NEW IN</button>
-              </li>
               <li>
                 <button>CLOTHING</button>
               </li>

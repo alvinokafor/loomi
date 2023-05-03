@@ -33,6 +33,22 @@ export default function ProductCard() {
         <p className="font-medium">Product Title</p>
         <p className="text-sm font-semibold text-primary">$Price</p>
       </div>
+
+      <div className="mt-4">
+        <button className="w-full bg-primary py-2 text-sm font-semibold text-white">
+          Add to Cart
+        </button>
+
+        {/* <div className="flex items-center justify-center gap-x-2">
+          <button>
+            <RemoveIcon />
+          </button>
+          <span>1</span>
+          <button>
+            <AddIcon />
+          </button>
+        </div> */}
+      </div>
     </div>
   );
 }

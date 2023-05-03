@@ -1,4 +1,5 @@
 import { Cormorant } from "next/font/google";
+import Link from "next/link";
 
 const cormarant = Cormorant({
   subsets: ["latin"],
@@ -17,9 +18,11 @@ export default function Hero() {
         <p className="font-light">Unique.</p>
       </div>
 
-      <button className="bg-white px-16 py-3 font-semibold shadow-md">
-        Shop now
-      </button>
+      <Link href="/products">
+        <button className="bg-white px-16 py-3 font-semibold shadow-md">
+          Shop now
+        </button>
+      </Link>
     </section>
   );
 }

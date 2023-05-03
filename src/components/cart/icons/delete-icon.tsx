@@ -1,0 +1,57 @@
+import React from "react";
+
+export default function DeleteIcon() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#clip0_313_14420)">
+        <path
+          d="M16.6673 7.5V17.1667C16.6673 18.2712 15.7719 19.1667 14.6673 19.1667H5.33398C4.22941 19.1667 3.33398 18.2712 3.33398 17.1667V7.5"
+          stroke="#222326"
+          stroke-miterlimit="10"
+          stroke-linecap="square"
+        />
+        <path
+          d="M0.833984 4.16602H19.1673"
+          stroke="#222326"
+          stroke-miterlimit="10"
+          stroke-linecap="square"
+        />
+        <path
+          d="M10 10V15"
+          stroke="#222326"
+          stroke-miterlimit="10"
+          stroke-linecap="square"
+        />
+        <path
+          d="M6.66797 10V15"
+          stroke="#222326"
+          stroke-miterlimit="10"
+          stroke-linecap="square"
+        />
+        <path
+          d="M13.334 10V15"
+          stroke="#222326"
+          stroke-miterlimit="10"
+          stroke-linecap="square"
+        />
+        <path
+          d="M6.66797 4.16634V0.833008H13.3346V4.16634"
+          stroke="#222326"
+          stroke-miterlimit="10"
+          stroke-linecap="square"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_313_14420">
+          <rect width="20" height="20" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+}

@@ -20,7 +20,7 @@ export default function SliderPopout({
         </button>
       </Popover.Trigger>
       <Popover.Portal>
-        <Popover.Content className="border border-slate-100 bg-white p-6 font-sans shadow-md">
+        <Popover.Content className="z-20 border border-slate-100 bg-white p-6 font-sans shadow-md">
           <div>
             <div className="flex items-center justify-between py-4">
               <p>${slideValues[0]}</p>
@@ -39,7 +39,7 @@ export default function SliderPopout({
           >
             <PopupClose />
           </Popover.Close>
-          <Popover.Arrow className="fill-white" />
+          <Popover.Arrow className="fill-white" width={14} height={10} />
         </Popover.Content>
       </Popover.Portal>
     </Popover.Root>
